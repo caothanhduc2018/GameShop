@@ -1,0 +1,201 @@
+﻿@{
+    ViewData["Title"] = "ShopGame";
+}
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="~/css/TrangChu.css"/>
+
+    <!--<link rel="stylesheet" href="~/css/GameChon.css"/>-->
+
+"
+</head>
+<body>
+<div class="text-center">
+    <h3 class="display-4">Welcome Game The World</h3>
+    <p>Game Shop<a href="https://store.steampowered.com/app/1121200/Silicon_City/?utm_campaign=gads_search_responsive&gclid=CjwKCAiA9tyQBhAIEiwA6tdCrKC_AYGiyzqZ4dOpuv1-oG7wLH_ddzSyUv3Jr-9TKOGZPt92F0hVgBoCfvgQAvD_BwE" target="_blank">building Web apps with ASP.NET Core</a>.</p>
+    
+</div>
+<div>
+    <img src="~/anhdaidien-_1920x1080-600x400.jpg" width="auto" height="627"/>
+</div>
+
+ 
+     <style>
+         *{
+             padding: 0;
+             margin: 0;
+         }
+         body{
+             font-family: 'Open Sans', sans-serif;
+             font-size: 14px;
+             color: #111;
+             line-height: 1.15;
+         }
+         #wrapper{
+             max-width: 1170px;
+             margin: 0 auto;
+         }
+         .headline{
+             text-align: center;
+             margin: 40px 0px;
+         }
+         h3{
+             font-size: 18px;
+             color: #111;
+             padding: 10px 20px;
+             text-transform: uppercase;
+             border: 1px solid #bebebe;
+             display: inline-blockl;
+             color: #555;
+         }
+         ul.products{
+             list-style: none;
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: space-between;
+         }
+         ul.products.li{
+             flex-basis: 25%;
+
+             padding-left: 15px;
+             padding-right: 15px;
+             box-sizing: border-box;
+             margin-bottom: 30px;
+         }
+         ul.products.li img{
+             max-width: 100px;
+             height: auto;
+         }
+         ul.products li .product-top{
+             position: relative;
+             overflow: hidden;
+         }
+         ul.products li .product-top .product-thumb{
+             display: block;
+         }
+         ul.products li:hover .product-top .product-thumb{
+             filter: opacity(80%);
+         }
+         ul.products li .product-top .product-thumb img{
+             display: block;
+         }
+         ul.products li .product-top a.buy-now{
+             text-transform: uppercase;
+             text-decoration: none;
+             text-align: center;
+             display: block;
+             background-color: #446084;
+             color: #fff;
+             padding: 10px 0px;
+             position: absolute;
+             bottom: -36px;
+             width: 100%;
+             transition: 0.25s ease-in-out;
+             opacity: 0.85;
+         }
+         ul.products li:hover a.buy-now{
+             bottom: 0px;
+         }
+         ul.products li .product-info{
+             padding: 10px 0px;
+         }
+         ul.products li .product-info a{
+             display: block;
+             text-decoration: none;
+         }
+         ul.products li .product-info a.product-cat{
+             font-size: 11px;
+             text-transform: uppercase;
+             color: #9e9e9e;
+             padding: 3px 0px;
+         }
+         ul.products li .product-info a.product-name{
+             color: #334862;
+             padding: 3px 0px;
+         }
+         ul.products li .product-info a.product-price{
+             color: #111;
+             padding: 2px 0px;
+             font-weight: 600;
+         }
+     </style>
+     <div id="wrapper">
+         <div class="headline">
+             <h3>Danh Sách Game</h3>
+         </div>
+         <ul class="products">
+             <li>
+                 <div class="product-item">
+                     <div class="product-top">
+                         <a href="" class="product-thumb">
+                             <img src="~/dying-light.png" alt="" width="250" height="auto" />
+                         </a>
+                         <a href="" class="buy-now">Mua Ngay</a>
+                         
+                     </div>
+                     <div class="product-info">
+                         <a href="" class="product-cat">Chi Tiết</a>
+                         <a href="" class="product-name">Dying Light</a>
+                         <div class="product-price">59.99</div>
+                     </div>
+                 </div>
+             </li>
+             <li>
+                 <div class="product-item">
+                     <div class="product-top">
+                         <a href="" class="product-thumb">
+                             <img src="~/horizon-forbidden-west-delay-2-1.jpg" alt="" width="250" height="auto" />
+                         </a>
+                         <a href="" class="buy-now">Buy Now</a>
+                         
+                     </div>
+                     <div class="product-info">
+                         <a href="" class="product-cat">Chi Tiết</a>
+                         <a href="" class="product-name">Horizon</a>
+                         <div class="product-price">59.99</div>
+                     </div>
+                 </div>
+             </li>
+             <li>
+                 <div class="product-item">
+                     <div class="product-top">
+                         <a href="" class="product-thumb">
+                             <img src="~/capsule_616x353.jpg" alt="" width="235" height="auto" />
+                         </a>
+                         <a href="" class="buy-now">Buy Now</a>
+                         
+                     </div>
+                     <div class="product-info">
+                         <a href="" class="product-cat">Chi Tiết</a>
+                         <a href="" class="product-name">Halo Infinte</a>
+                         <div class="product-price">59.99</div>
+                     </div>
+                 </div>
+             </li>
+             <li>
+                 <div class="product-item">
+                     <div class="product-top">
+                         <a href="" class="product-thumb">
+                             <img src="~/Genshin_Impact_cover.jpg" alt="" width="225" height="auto" />
+                         </a>
+                         <a href="" class="buy-now">Buy Now</a>
+                         
+                     </div>
+                     <div class="product-info">
+                         <a href="" class="product-cat">Chi Tiết</a>
+                         <a href="" class="product-name">Genshin Impact</a>
+                         <div class="product-price">59.99</div>
+                     </div>
+                 </div>
+             </li>
+             
+         </ul>
+     </div>
+     
+
+
+
+</body>
+
+
+

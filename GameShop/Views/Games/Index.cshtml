@@ -1,0 +1,102 @@
+﻿@model GameShop.Models.DanhSachGame
+
+@{
+    ViewData["Title"] = "Game";
+}
+<link rel="stylesheet" href="~/css/FromGame.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" />
+<h1>Game Shop</h1>
+
+
+
+<form asp-controller="Games" asp-action="Index" method="get">
+<p>
+    <select asp-for="GameGenre" asp-items="Model.Genres">
+<option value="">All</option>
+</select>
+
+Title: <input type="text" name="PlayString" />
+<input type="submit" value="Filter" />
+</p>
+</form>
+
+
+    
+   <tbody>
+@foreach (var item in Model.Games) {
+    
+        <div id="wrapper">
+         <div class="headline">
+             <h3>Thể Loại Game</h3>
+         </div>
+         <ul class="products">
+             <li>
+                 <div class="product-item">
+                     <div class="product-top">
+                         <a href="" class="product-thumb">
+                             <img src="~/dying-light.png" alt="" width="250" height="auto" />
+                         </a>
+                         <a href="" class="buy-now">Mua Ngay</a>
+                         
+                     </div>
+                     <div class="product-info">
+                         <a asp-controller="Games" asp-action="Details" asp-route-id="@item.Id" class="product-cat">Chi Tiết</a>
+                         <a href="" class="product-name">Dying Light</a>
+                         <div class="product-price">59.99</div>
+                     </div>
+                 </div>
+             </li>
+             <li>
+                 <div class="product-item">
+                     <div class="product-top">
+                         <a href="" class="product-thumb">
+                             <img src="~/horizon-forbidden-west-delay-2-1.jpg" alt="" width="250" height="auto" />
+                         </a>
+                         <a href="" class="buy-now">Buy Now</a>
+                         
+                     </div>
+                     <div class="product-info">
+                         <a href="" class="product-cat">Chi Tiết</a>
+                         <a href="" class="product-name">Horizon</a>
+                         <div class="product-price">59.99</div>
+                     </div>
+                 </div>
+             </li>
+             <li>
+                 <div class="product-item">
+                     <div class="product-top">
+                         <a href="" class="product-thumb">
+                             <img src="~/capsule_616x353.jpg" alt="" width="235" height="auto" />
+                         </a>
+                         <a href="" class="buy-now">Buy Now</a>
+                         
+                     </div>
+                     <div class="product-info">
+                         <a href="" class="product-cat">Chi Tiết</a>
+                         <a href="" class="product-name">Halo Infinte</a>
+                         <div class="product-price">59.99</div>
+                     </div>
+                 </div>
+             </li>
+             <li>
+                 <div class="product-item">
+                     <div class="product-top">
+                         <a href="" class="product-thumb">
+                             <img src="~/Genshin_Impact_cover.jpg" alt="" width="225" height="auto" />
+                         </a>
+                         <a href="" class="buy-now">Buy Now</a>
+                         
+                     </div>
+                     <div class="product-info">
+                         <a href="" class="product-cat">Chi Tiết</a>
+                         <a href="" class="product-name">Genshin Impact</a>
+                         <div class="product-price">59.99</div>
+                     </div>
+                 </div>
+             </li>
+             
+         </ul>
+     </div>
+}
+    </tbody>
+

@@ -1,0 +1,67 @@
+﻿@model GameShop.Models.DanhSachGame
+
+@{
+    ViewData["Title"] = "Game";
+}
+<link rel="stylesheet" href="~/css/FromGame.css" asp-append-version="true" />
+<h1>Game Shop</h1>
+
+<p>
+    <a asp-action="Create">Tạo Mới</a>
+</p>
+
+<form asp-controller="Games" asp-action="Index" method="get">
+<p>
+    <select asp-for="GameGenre" asp-items="Model.Genres">
+<option value="">All</option>
+</select>
+
+Title: <input type="text" name="PlayString" />
+<input type="submit" value="Filter" />
+</p>
+</form>
+
+<table class="table">
+   
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Games[0].TenGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Games[0].NgayMua)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Games[0].TheLoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Games[0].GiaMua)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+@foreach (var item in Model.Games) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayMua)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TheLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaMua)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Sửa Chữa</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Thông Tin</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Xóa Game</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
